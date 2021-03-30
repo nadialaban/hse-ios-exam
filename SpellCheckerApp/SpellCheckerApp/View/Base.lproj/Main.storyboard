@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Speller Check View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SpellerCheckViewController" customModule="SpellCheckerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter fruit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0E-XL-drF">
+                                <rect key="frame" x="161.5" y="84" width="91" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6R-wL-L7x">
+                                <rect key="frame" x="20" y="213.5" width="66" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-m7-jHg">
+                                <rect key="frame" x="20" y="118" width="374" height="35.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CI-iy-sM2">
+                                <rect key="frame" x="176" y="161.5" width="62" height="38"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="Check"/>
+                                <connections>
+                                    <action selector="onCheckWord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="101-Or-XXV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS0-dd-63g">
+                                <rect key="frame" x="382" y="213.5" width="12" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l6R-wL-L7x" firstAttribute="top" secondItem="gwe-m7-jHg" secondAttribute="bottom" constant="60" id="6Ks-TR-Vgf"/>
+                            <constraint firstItem="gwe-m7-jHg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="862-1P-0bI"/>
+                            <constraint firstItem="8CI-iy-sM2" firstAttribute="top" secondItem="gwe-m7-jHg" secondAttribute="bottom" constant="8" symbolic="YES" id="8Jk-Cd-p9R"/>
+                            <constraint firstItem="l6R-wL-L7x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dyk-1e-nYU"/>
+                            <constraint firstItem="F0E-XL-drF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Yyt-EE-XE0"/>
+                            <constraint firstItem="gwe-m7-jHg" firstAttribute="top" secondItem="F0E-XL-drF" secondAttribute="bottom" constant="8" symbolic="YES" id="ZKN-Qu-rfn"/>
+                            <constraint firstItem="OS0-dd-63g" firstAttribute="top" secondItem="gwe-m7-jHg" secondAttribute="bottom" constant="60" id="dZk-p3-etM"/>
+                            <constraint firstItem="F0E-XL-drF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dl3-Pq-4rf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gwe-m7-jHg" secondAttribute="trailing" constant="20" id="dlY-KR-J5A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OS0-dd-63g" secondAttribute="trailing" constant="20" id="rKw-it-INJ"/>
+                            <constraint firstItem="8CI-iy-sM2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yfV-WB-M5N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="OS0-dd-63g" id="Etd-Q6-POh"/>
+                        <outlet property="wordTextField" destination="gwe-m7-jHg" id="f0e-qU-RPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
